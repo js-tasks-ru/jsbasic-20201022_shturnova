@@ -3,26 +3,17 @@
  * @returns {string}
  */
 
-
-/*async function camelize(str) {
-
-  const  _ = await require('lodash.camelcase');
-
-  let result = _(str);
-  return Promise.resolve(result);
-
-} */
-
-/*
-import {camelCase} from 'lodash';
-
 function camelize(str) {
 
-  return camelCase(str);
-} */
-const  _ =  require('lodash.camelcase');
+  let arr = str.split('-');
 
-function camelize(str) {
+  let arrNew = [];
+  arrNew.push(arr[0]);
 
-  return _(str);
+  for (let i = 1; i < arr.length; i++) {
+    arrNew.push(arr[i][0].toUpperCase() + arr[i].slice(1));
+  }
+
+  return arrNew.join(``);
+
 }
