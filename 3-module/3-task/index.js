@@ -12,11 +12,17 @@
   return Promise.resolve(result);
 
 } */
-//const  _ =  require('lodash.camelcase');
+
+/*
 import {camelCase} from 'lodash';
 
- function camelize(str) {
+function camelize(str) {
 
-return camelCase(str);
+  return camelCase(str);
+} */
+const  _ =  require('lodash.camelcase');
 
- }
+function camelize(str) {
+
+  return _(str);
+}
