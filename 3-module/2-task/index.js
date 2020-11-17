@@ -12,6 +12,6 @@ for (let num of arr) {
     filtered.push(num);
 }
 
-console.log(filtered);
+//console.log(filtered);
 return filtered;
 }
