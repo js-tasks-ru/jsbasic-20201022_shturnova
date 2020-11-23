@@ -42,7 +42,6 @@ export default class Carousel {
     const slidesAmount = Array.from(this.elem.querySelectorAll('.carousel__slide')).length;
 
     let slide = this.elem.querySelector('.carousel__slide');
-    const slideWidth = slide.offsetWidth;
 
     let counter = 1;
     this.counter = counter;
@@ -67,6 +66,8 @@ export default class Carousel {
     checkArrows();
 
     arrowRight.addEventListener('click', () => {
+
+      const slideWidth = slide.offsetWidth;
       counter = counter + 1;
       pxnumber = pxnumber + slideWidth;
       checkArrows();
@@ -79,6 +80,8 @@ export default class Carousel {
     });
 
     arrowLeft.addEventListener('click', () => {
+
+      const slideWidth = slide.offsetWidth;
       counter = counter - 1;
       pxnumber = pxnumber - slideWidth;
       checkArrows();
