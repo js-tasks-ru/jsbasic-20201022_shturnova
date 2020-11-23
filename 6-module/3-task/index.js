@@ -9,12 +9,12 @@ export default class Carousel {
 
     _elem.className = 'carousel';
 
-    let lenta1 = document.createElement('div');
-    lenta1.className = 'carousel__inner';
-    _elem.append(lenta1);
+    let lenta = document.createElement('div');
+    lenta.className = 'carousel__inner';
+    _elem.append(lenta);
 
     for (let i = 0; i < slides.length; i++) {
-      lenta1.insertAdjacentHTML('beforeend', `
+      lenta.insertAdjacentHTML('beforeend', `
                 <div class="carousel__slide" data-id="${slides[i].id}">
                     <img src="../../assets/images/carousel/${slides[i].image}" class="carousel__img" alt="slide">
                     <div class="carousel__caption">
@@ -39,9 +39,8 @@ export default class Carousel {
     _elem.append(arrowLeft);
     _elem.append(arrowRight);
 
-
-    let lenta = this.elem.querySelector('.carousel__inner');
     const slidesAmount = Array.from(this.elem.querySelectorAll('.carousel__slide')).length;
+
     let slide = this.elem.querySelector('.carousel__slide');
     const slideWidth = slide.offsetWidth;
 
@@ -94,8 +93,6 @@ export default class Carousel {
     buttonAdd.addEventListener('click', () => this.onClick());
 
   }
-
-
 
 
   onClick() {
