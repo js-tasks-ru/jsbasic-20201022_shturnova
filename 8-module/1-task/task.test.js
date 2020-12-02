@@ -1,5 +1,5 @@
 import CartIcon from './index.js';
-import createElement from '../../assets/lib/create-element.js';
+import createElement from '/assets/lib/create-element.js';
 
 describe('8-module-1-task', () => {
   let cartIcon;
@@ -36,7 +36,7 @@ describe('8-module-1-task', () => {
         }
 
         .cart-icon__inner {
-          background: url("/assets/images/icons/cart-icon.svg") center no-repeat;
+          background: url("../../assets/images/icons/cart-icon.svg") center no-repeat;
           background-size: cover;
           position: relative;
           width: 100%;
